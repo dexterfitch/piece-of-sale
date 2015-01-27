@@ -5,10 +5,10 @@
   <input id="product_id" name="product_id" type="hidden" value="">
 
   <label for="product_name">Edit the product name here:</label>
-  <input id="product_name" name="product_name" type="text">
+  <input id="product_name" name="product_name" type="text" value="<%= @product.product_name() %>">
 
   <label for="price">Edit the product price here:</label>
-  <input id="price" name="price" type="text">
+  <input id="price" name="price" type="text" value="<%= @product.price() %>">
 
   <button type="submit">Update</button>
 </form>

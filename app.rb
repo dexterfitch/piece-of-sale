@@ -31,5 +31,3 @@ get('/products/:id/edit') do
   @product = Product.find(params["id"].to_i())
   erb(:product_edit)
 end
-
-params = {"product_name" => "fruit", "price" => 5, "id" => "5"}
