@@ -31,3 +31,9 @@ get('/products/:id/edit') do
   @product = Product.find(params["id"].to_i())
   erb(:product_edit)
 end
+
+delete('/products/:id') do
+  @product = Product.find(params["id"].to_i())
+  @product.destroy()
+  redirect('/')
+end

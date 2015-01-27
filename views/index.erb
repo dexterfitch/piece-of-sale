@@ -8,6 +8,7 @@
       <li><%= product.product_name() %> | $<%= product.price() %> | <a href="/products/<%= product.id() %>/edit">Update</a></li>
     <% end %>
   </ul>
+  
 <% else %>
   <p>There are no products yet!</p>
 <% end %>

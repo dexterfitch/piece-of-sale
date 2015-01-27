@@ -12,6 +12,13 @@
 
   <button type="submit">Update</button>
 </form>
+<p></p>
+<form action="/products/<%= @product.id() %>" method="post">
+  <input name="_method" type="hidden" value="delete">
+
+  <button type="submit">Delete Product</button>
+</form>
+
 
 <span class="return"><p><a href="/">Click here to go back to previous page</a></p></span>
 
