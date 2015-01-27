@@ -1,0 +1,19 @@
+<h3>Update "<%= @product.product_name() %>"</h3>
+
+<form action="/products/<%= @product.id() %>" method="post">
+  <input name="_method" type="hidden" value="patch">
+  <input id="product_id" name="product_id" type="hidden" value="">
+
+  <label for="product_name">Edit the product name here:</label>
+  <input id="product_name" name="product_name" type="text">
+
+  <label for="price">Edit the product price here:</label>
+  <input id="price" name="price" type="text">
+
+  <button type="submit">Update</button>
+</form>
+
+<span class="return"><p><a href="/">Click here to go back to previous page</a></p></span>
+
+
+<!-- /products/<%= @product.id() %> -->

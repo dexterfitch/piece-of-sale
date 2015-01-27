@@ -1,0 +1,27 @@
+<h1>Point of Sale</h1>
+
+<hr>
+
+<% if @products.any?() %>
+  <ul>
+    <% @products.each() do |product| %>
+      <li><%= product.product_name() %> | $<%= product.price().to_s().insert(-3, ".") %> | <a href="/products/<%= product.id() %>/edit">Update</a></li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>There are no products yet!</p>
+<% end %>
+
+<hr>
+
+<h3>Add a product:</h3>
+
+<form action="/products" method="post" class="form-entry">
+  <label for="product_name"></label>
+  <input id="product_name" name="product_name" type="text" placeholder="ex: Fancy Feast">
+
+  <label for="price"></label>
+  <input id="price" name="price" type="text" placeholder="5.00 = 500">
+
+  <button type="submit">Add product!</button>
+</form>
