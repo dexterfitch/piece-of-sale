@@ -3,11 +3,11 @@
 <hr>
 
 <% if @products.any?() %>
-  <form action="/shopping_cart" method="get">
+  <form action="/shopping_cart" method="post">
     <% @products.each() do |product| %>
-      <input type="checkbox" name="purchase" value="purchase"><%= product.product_name() %> | $<%= product.price() %><p></p>
+      <input id="product_id" name="product_id" type="hidden" value="<%= product.id() %>">
+      <input type="checkbox" name="purchase" value="purchase"><%= product.product_name() %> | $<%= product.price() %> | <%= product.id() %> | <button type="submit">Add product!</button><p></p>
     <% end %>
-    <button type="submit">Add product!</button>
   </form>
 
 <% else %>

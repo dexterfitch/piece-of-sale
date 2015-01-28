@@ -3,6 +3,7 @@ require('sinatra')
 require('sinatra/reloader')
 also_reload('lib/**/*.rb')
 require('./lib/product')
+require('./lib/purchase')
 require('pg')
 require('pry')
 
@@ -41,4 +42,12 @@ end
 get('/shopping_cart') do
   @products = Product.all
   erb(:shopping_cart)
+end
+
+post('/shopping_cart') do
+  purchase = params["purchase"]
+  product_id = params["product_id"]
+  add_to_cart = Purchase.new({:product_id => product_id})
+  add_to_cart.save()
+  redirect('/shopping_cart')
 end

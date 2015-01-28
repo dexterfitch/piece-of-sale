@@ -12,3 +12,10 @@ RSpec.configure do |config|
     end
   end
 end
+
+
+
+
+# Handy input checkbox model
+#
+# http://www.w3schools.com/tags/tryit.asp?filename=tryhtml_form_checkbox
