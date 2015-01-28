@@ -37,3 +37,8 @@ delete('/products/:id') do
   @product.destroy()
   redirect('/')
 end
+
+get('/shopping_cart') do
+  @products = Product.all
+  erb(:shopping_cart)
+end

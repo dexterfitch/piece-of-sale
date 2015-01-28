@@ -8,7 +8,7 @@
       <li><%= product.product_name() %> | $<%= product.price() %> | <a href="/products/<%= product.id() %>/edit">Update</a></li>
     <% end %>
   </ul>
-  
+
 <% else %>
   <p>There are no products yet!</p>
 <% end %>
@@ -26,3 +26,7 @@
 
   <button type="submit">Add product!</button>
 </form>
+
+<hr>
+
+<a href="/shopping_cart">Go to Shopping Cart!</a>
